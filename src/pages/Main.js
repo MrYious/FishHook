@@ -1,10 +1,9 @@
-import React from "react";
-import { Text } from 'react-native';
+import { Text, View } from 'react-native';
 
 const Main = () => {
   return (
     <>
-      Main
+      <Text>Home</Text>
     </>
   );
 };
