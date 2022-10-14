@@ -1,9 +1,8 @@
-import {Button, StyleSheet, Text, View} from 'react-native';
-import React, {useState} from 'react';
-
+import Home from './src/pages/Home';
+import Main from './src/pages/Main';
 import {NavigationContainer} from '@react-navigation/native';
+import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-
 const Stack = createStackNavigator();
 
 const App = () => {
@@ -13,31 +12,14 @@ const App = () => {
         <Stack.Navigator>
           <Stack.Screen
             name="Home"
-            component={<></>}
+            component={Home}
             options={{title: 'Welcome'}}
           />
-          <Stack.Screen name="Main" component={<></>} />
+          <Stack.Screen name="Main" component={Main} />
         </Stack.Navigator>
       </NavigationContainer>
     </>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: 16,
-  },
-  navigationContainer: {
-    backgroundColor: '#ecf0f1',
-  },
-  paragraph: {
-    padding: 16,
-    fontSize: 15,
-    textAlign: 'center',
-  },
-});
 
 export default App;
