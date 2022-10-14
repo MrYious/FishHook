@@ -1,6 +1,4 @@
-import { Text, View } from 'react-native';
-
-import Home from './src/pages/Home';
+import Landing from './src/pages/Landing';
 import Main from './src/pages/Main';
 import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
@@ -20,8 +18,8 @@ const App = () => {
           }}
         >
           <Stack.Screen
-            name="Home"
-            component={Home}
+            name="Landing"
+            component={Landing}
             options={{title: 'Welcome'}}
           />
           <Stack.Screen

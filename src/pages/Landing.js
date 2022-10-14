@@ -1,6 +1,6 @@
 import { BackHandler, Pressable, Text, View } from 'react-native';
 
-const Home = ({ navigation }) => {
+const Landing = ({ navigation }) => {
   return (
     <View className={'items-center justify-center flex-1 h-screen bg-gray-200'}>
 
@@ -33,4 +33,4 @@ const Home = ({ navigation }) => {
   );
 };
 
-export default Home;
+export default Landing;
