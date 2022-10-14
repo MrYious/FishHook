@@ -3,19 +3,30 @@ import Main from './src/pages/Main';
 import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-const Stack = createStackNavigator();
 
+const Stack = createStackNavigator();
 const App = () => {
   return (
     <>
       <NavigationContainer>
-        <Stack.Navigator>
+        <Stack.Navigator
+          initialRouteName="Home"
+          screenOptions={{
+            headerMode: 'screen',
+            headerTintColor: 'white',
+            headerStyle: { backgroundColor: 'gray' },
+          }}
+        >
           <Stack.Screen
             name="Home"
             component={Home}
             options={{title: 'Welcome'}}
           />
-          <Stack.Screen name="Main" component={Main} />
+          <Stack.Screen
+            name="Main"
+            component={Main}
+            options={{title: 'Main'}}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </>
