@@ -1,3 +1,5 @@
+import { Text, View } from 'react-native';
+
 import Home from './src/pages/Home';
 import Main from './src/pages/Main';
 import {NavigationContainer} from '@react-navigation/native';
@@ -14,7 +16,7 @@ const App = () => {
           screenOptions={{
             headerMode: 'screen',
             headerTintColor: 'white',
-            headerStyle: { backgroundColor: 'gray' },
+            headerStyle: { backgroundColor: '#166534' },
           }}
         >
           <Stack.Screen
