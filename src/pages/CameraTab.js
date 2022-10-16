@@ -1,6 +1,6 @@
 import { Image, Pressable, Text, View } from 'react-native';
-import {launchCamera, launchImageLibrary} from 'react-native-image-picker';
 
+import {launchCamera} from 'react-native-image-picker';
 import { useState } from 'react';
 
 const CameraTab = () => {

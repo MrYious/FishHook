@@ -1,6 +1,6 @@
 import { Image, Pressable, Text, View } from 'react-native';
-import {launchCamera, launchImageLibrary} from 'react-native-image-picker';
 
+import {launchImageLibrary} from 'react-native-image-picker';
 import { useState } from 'react';
 
 const GalleryTab = () => {
@@ -12,7 +12,7 @@ const GalleryTab = () => {
       mediaType: 'photo',
       includeBase64: true,
     }
-    const result = await launchCamera(options);
+    const result = await launchImageLibrary(options);
     if(result.didCancel){
       alert('Cancelled')
     }else{
