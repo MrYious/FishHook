@@ -1,8 +1,8 @@
-import { Text, View } from 'react-native';
+import { Image, Text, View } from 'react-native';
 
 const InfoTab = () => {
   return (
-    <View className={' p-4 justify-center flex-1 h-screen bg-gray-200'}>
+    <View className={'p-4  flex-1 h-screen bg-gray-200'}>
       <Text className={'text-2xl mb-3 font-bold text-black'}>Instructions</Text>
       <Text className={'text-lg mb-1 font-bold text-black'}>
         Using an existing image:
@@ -28,10 +28,13 @@ const InfoTab = () => {
       <Text className={'text-lg mb-4 text-justify'}>
         The following image is an example of a tilapia image in Profile View.
       </Text>
-      <View className={'flex items-center w-full'}>
-        <View className={'w-2/3 h-28 bg-gray-600 flex items-center justify-center'}>
-          <Text className={'text-white'}>IMAGE HERE</Text>
-        </View>
+      <View className={'flex items-center justify-center h-32 '}>
+        <Image
+          className={' w-56 h-fit'}
+          resizeMode={'contain'}
+          resizeMethod="scale"
+          source={require('../assets/position.jpg')}
+        />
       </View>
     </View>
   );
