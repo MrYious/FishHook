@@ -26,7 +26,7 @@ const Landing = ({ navigation }) => {
           className={'bg-red-900 w-32 py-3 '}
           onPress={()=> BackHandler.exitApp()}
         >
-          <Text className="text-xl font-semibold text-center text-white">Exit</Text>
+          <Text className="text-xl font-semibold text-center text-gray-300">Exit</Text>
         </Pressable>
       </View>
     </View>
