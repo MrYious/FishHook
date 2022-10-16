@@ -1,6 +1,8 @@
 import AboutTab from './AboutTab';
+import CameraTab from './CameraTab';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import GalleryTab from './GalleryTab';
 import HomeTab from './HomeTab';
 import InfoTab from './InfoTab';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
@@ -30,7 +32,7 @@ const Main = ({ navigation }) => {
       />
       <Tab.Screen
         name="Camera"
-        component={AboutTab}
+        component={CameraTab}
         options={{
           tabBarLabel: 'Camera',
           tabBarIcon: ({ color, size }) => (
@@ -50,7 +52,7 @@ const Main = ({ navigation }) => {
       />
       <Tab.Screen
         name="Gallery"
-        component={AboutTab}
+        component={GalleryTab}
         options={{
           tabBarLabel: 'Gallery',
           tabBarIcon: ({ color, size }) => (
