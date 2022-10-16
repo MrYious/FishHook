@@ -25,7 +25,7 @@ const App = () => {
           <Stack.Screen
             name="Main"
             component={Main}
-            options={{title: 'Main'}}
+            options={{title: 'FishHook'}}
           />
         </Stack.Navigator>
       </NavigationContainer>
