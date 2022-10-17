@@ -1,4 +1,4 @@
-import { Image, Pressable, Text, View } from 'react-native';
+import { Image, Pressable, StyleSheet, Text, View } from 'react-native';
 
 import {launchImageLibrary} from 'react-native-image-picker';
 import { useState } from 'react';
@@ -14,9 +14,10 @@ const GalleryTab = () => {
     }
     const result = await launchImageLibrary(options);
     if(result.didCancel){
-      alert('Cancelled')
+      // alert('Cancelled')
     }else{
-      // console.log('Base64', result.assets[0].base64);
+      // console.log('Response', result.assets[0]);
+      // console.log('fileName -> ', result.assets[0].base64);
       setFilepath(result.assets[0].base64);
     }
   }
@@ -26,36 +27,31 @@ const GalleryTab = () => {
       <Text className={'text-lg mb-6 font-bold'}>
         Click the button and select an image
       </Text>
-      <View className={'flex flex-col items-center justify-center py-2 w-full z-10'}>
+      <View className={'flex flex-col items-center justify-center py-2 w-full z-10 mb-5'}>
         <Pressable
-          className={'bg-blue-900 w-4/5 py-5 mb-2'}
+          className={'bg-blue-900 w-4/5 py-5 '}
           onPress={()=> onSelectImage()}
         >
           <Text className="text-xl font-semibold text-center text-gray-200">Select an image</Text>
         </Pressable>
       </View>
-      <View className={'flex items-center mb-2 w-full'}>
-        <View className={'flex items-center justify-center h-40 '}>
-          <Image
-            className={' w-64 h-fit'}
-            resizeMode={'contain'}
-            resizeMethod={"scale"}
-            source={require('../assets/position.jpg')}
-          />
-        </View>
-        {/* {filepath ?
+      <View className={'flex items-center mb-5 w-full'}>
+        {filepath ?
           <View className={'flex items-center justify-center h-40 '}>
             <Image
-              className={' w-64 h-40'}
+              className={' w-80 h-48 '}
               resizeMode={'contain'}
               resizeMethod={"scale"}
-              source={{uri: filepath}}
+              source={{
+                uri: `data:image/png;base64,${filepath}`
+              }}
             />
           </View>
           :
-          <View className={'flex items-center justify-center w-full h-40 bg-red-300'}>
+          <View className={'flex items-center justify-center w-full h-40 '}>
+            <Text>Your Image goes here</Text>
           </View>
-        } */}
+        }
       </View>
       <View className={'flex flex-col items-center justify-center py-2 w-full'}>
         <Pressable
