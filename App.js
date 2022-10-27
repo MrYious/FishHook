@@ -10,7 +10,7 @@ const App = () => {
     <>
       <NavigationContainer>
         <Stack.Navigator
-          initialRouteName="Home"
+          initialRouteName="Landing"
           screenOptions={{
             headerMode: 'screen',
             headerTintColor: 'white',

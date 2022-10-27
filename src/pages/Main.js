@@ -1,5 +1,5 @@
 import AboutTab from './AboutTab';
-import CameraTab from './CameraTab';
+import CameraStacks from './CameraStacks';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import GalleryTab from './GalleryTab';
@@ -32,7 +32,7 @@ const Main = ({ navigation }) => {
       />
       <Tab.Screen
         name="Camera"
-        component={CameraTab}
+        component={CameraStacks}
         options={{
           tabBarLabel: 'Camera',
           tabBarIcon: ({ color, size }) => (

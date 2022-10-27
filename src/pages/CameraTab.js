@@ -3,7 +3,7 @@ import { Image, Pressable, Text, View } from 'react-native';
 import {launchCamera} from 'react-native-image-picker';
 import { useState } from 'react';
 
-const CameraTab = () => {
+const CameraTab = ({navigation}) => {
   const [filepath, setFilepath] = useState('')
 
   const onCaptureImage = async () => {
@@ -54,7 +54,10 @@ const CameraTab = () => {
         }
       </View>
       <View className={'flex flex-col items-center justify-center py-2 w-full'}>
-        <Pressable className={'bg-green-900 w-4/5 py-5 mb-2'}>
+        <Pressable
+          className={'bg-green-900 w-4/5 py-5 mb-2'}
+          onPress={()=> navigation.navigate('Result')}
+        >
           <Text className="text-xl font-semibold text-center text-gray-200">Start the scan</Text>
         </Pressable>
       </View>
