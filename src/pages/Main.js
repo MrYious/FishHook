@@ -2,7 +2,7 @@ import AboutTab from './AboutTab';
 import CameraStacks from './CameraStacks';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
-import GalleryTab from './GalleryTab';
+import GalleryStacks from './GalleryStacks';
 import HomeTab from './HomeTab';
 import InfoTab from './InfoTab';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
@@ -52,7 +52,7 @@ const Main = ({ navigation }) => {
       />
       <Tab.Screen
         name="Gallery"
-        component={GalleryTab}
+        component={GalleryStacks}
         options={{
           tabBarLabel: 'Gallery',
           tabBarIcon: ({ color, size }) => (
