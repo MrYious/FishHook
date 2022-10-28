@@ -1,11 +1,18 @@
 import { Image, Pressable, StyleSheet, Text, View } from 'react-native';
+import { useEffect, useState } from 'react';
 
 import {launchImageLibrary} from 'react-native-image-picker';
-import { useState } from 'react';
 
 const GalleryTab = ({navigation}) => {
 
   const [filepath, setFilepath] = useState('')
+
+  useEffect(() => {
+    const unsubscribe = navigation.addListener('focus', () => {
+      setFilepath('');
+    });
+    return unsubscribe;
+  }, [navigation]);
 
   const onSelectImage = async () => {
     const options = {
@@ -21,6 +28,13 @@ const GalleryTab = ({navigation}) => {
       setFilepath(result.assets[0].base64);
     }
   }
+
+  const handleScanImage = () => {
+    if(filepath){
+      navigation.navigate('Result', { filepath: filepath })
+    }
+  }
+
   return (
     <View className={'p-4 justify-center flex-1 h-screen bg-gray-200'}>
       <Text className={'text-2xl mb-3 font-bold text-black'}>Select from Device</Text>
@@ -55,8 +69,8 @@ const GalleryTab = ({navigation}) => {
       </View>
       <View className={'flex flex-col items-center justify-center py-2 w-full'}>
         <Pressable
-          className={'bg-green-900 w-4/5 py-5 mb-2'}
-          onPress={()=> navigation.navigate('Result')}
+          className={`w-4/5 py-5 mb-2 ${filepath ? 'bg-green-900' : 'bg-gray-500'}`}
+          onPress={handleScanImage}
         >
           <Text className="text-xl font-semibold text-center text-gray-200">Start the scan</Text>
         </Pressable>
