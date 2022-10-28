@@ -25,7 +25,7 @@ const CameraTab = ({navigation}) => {
     <View className={'p-4 justify-center flex-1 h-screen bg-gray-200'}>
       <Text className={'text-2xl mb-3 font-bold text-black'}>Live Capture of Image</Text>
       <Text className={'text-lg mb-6 font-bold'}>
-        Click the button and capture an photo
+        Click the button and capture an image
       </Text>
       <View className={'flex flex-col items-center justify-center py-2 w-full z-10 mb-5'}>
         <Pressable
