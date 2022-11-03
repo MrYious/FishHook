@@ -1,8 +1,8 @@
-import { Text, View } from 'react-native';
+import { ScrollView, Text, View } from 'react-native';
 
 const AboutTab = () => {
   return (
-    <View className={' p-4 justify-center flex-1 h-screen bg-gray-200'}>
+    <ScrollView className={'p-4 flex-1 bg-gray-200'}>
       <Text className={'text-2xl mb-3 font-bold text-black'}>
         Everything About Us
       </Text>
@@ -34,9 +34,24 @@ const AboutTab = () => {
         License
       </Text>
       <Text className={'text-lg mb-3 text-justify text-black'}>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, impedit!
+        This project is open source and can be used by future researchers. Access the project thru this link:
+        <Text className="underline"> https://github.com/MrYious/FishHook</Text>
       </Text>
-    </View>
+      <Text className={'text-lg mb-1 font-bold text-black'}>
+        Department of Agriculture - Bureau of Fisheries and Aquatic Resources (DA-BFAR)
+      </Text>
+      <Text className={'text-lg mb-1 text-justify text-black'}>
+        Responsible for the development, improvement, management, and conservation of the country's fishery and aquatic resources.
+      </Text>
+      <Text className={'text-lg mb-1 text-justify text-black'}>
+        Email: info@bfar.da.gov.ph
+      </Text>
+      <Text className={'text-lg mb-3 text-justify text-black'}>
+        Contact #: +63(2)929-8074
+      </Text>
+      <Text className={'text-lg mb-3 text-justify text-black'}>
+      </Text>
+    </ScrollView>
   );
 };
 
