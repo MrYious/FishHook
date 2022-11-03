@@ -1,8 +1,8 @@
-import { Image, Text, View } from 'react-native';
+import { Image, ScrollView, Text, View } from 'react-native';
 
 const InfoTab = () => {
   return (
-    <View className={'p-4  flex-1 h-screen bg-gray-200'}>
+    <View className={'p-4 flex-1 bg-gray-200'}>
       <Text className={'text-2xl mb-3 font-bold text-black'}>Instructions</Text>
       <Text className={'text-lg mb-1 font-bold text-black'}>
         Using an existing image:
@@ -13,7 +13,7 @@ const InfoTab = () => {
       <Text className={'text-lg mb-1 font-bold text-black'}>
         Using the camera:
       </Text>
-      <Text className={'text-lg mb-6 text-justify text-black'}>
+      <Text className={'text-lg mb-3 text-justify text-black'}>
         Click the <Text className={'font-bold'}>Camera</Text> Tab, then capture the image by pointing the camera to the tilapia and pressing the shutter button.
       </Text>
       <Text className={'text-lg mb-1 font-bold text-black'}>
@@ -30,10 +30,10 @@ const InfoTab = () => {
       </Text>
       <View className={'flex items-center justify-center h-32 '}>
         <Image
-          className={' w-56 h-fit'}
+          className={'w-full h-fit'}
           resizeMode={'contain'}
           resizeMethod="scale"
-          source={require('../assets/position.jpg')}
+          source={require('../assets/position.png')}
         />
       </View>
     </View>
