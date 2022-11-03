@@ -37,7 +37,7 @@ const ResultTab = ({navigation, route}) => {
         <Text className='mb-2 text-xl font-bold text-black'>Details:</Text>
         {/* 1 */}
         <View className='flex flex-row items-center w-full mb-2'>
-          <Text className='w-[60%] text-xl'>Skin Texture: </Text>
+          <Text className='w-[60%] text-xl text-black'>Skin Texture: </Text>
           <Text className={`w-[25%] text-xl font-bold ${details.texture? 'text-green-700' : 'text-red-700'}`}>{details.texture ? 'Positive' : 'Negative'}</Text>
           <Pressable className='pl-2' onPress={() => alert('Clicked')}>
             <MaterialIcons name={'info-outline'} size={20} color={'black'} />
@@ -45,7 +45,7 @@ const ResultTab = ({navigation, route}) => {
         </View>
         {/* 2 */}
         <View className='flex flex-row items-center w-full mb-2'>
-          <Text className='w-[60%] text-xl'>Skin Color: </Text>
+          <Text className='w-[60%] text-xl text-black'>Skin Color: </Text>
           <Text className={`w-[25%] text-xl font-bold ${details.color? 'text-green-700' : 'text-red-700'}`}>{details.color ? 'Positive' : 'Negative'}</Text>
           <Pressable className='pl-2' onPress={() => alert('Clicked')}>
             <MaterialIcons name={'info-outline'} size={20} color={'black'} />
@@ -53,7 +53,7 @@ const ResultTab = ({navigation, route}) => {
         </View>
         {/* 3 */}
         <View className='flex flex-row items-center w-full mb-2'>
-          <Text className='w-[60%] text-xl'>Scale Pattern: </Text>
+          <Text className='w-[60%] text-xl text-black'>Scale Pattern: </Text>
           <Text className={`w-[25%] text-xl font-bold ${details.pattern? 'text-green-700' : 'text-red-700'}`}>{details.pattern ? 'Positive' : 'Negative'}</Text>
           <Pressable className='pl-2' onPress={() => alert('Clicked')}>
             <MaterialIcons name={'info-outline'} size={20} color={'black'} />
@@ -61,7 +61,7 @@ const ResultTab = ({navigation, route}) => {
         </View>
         {/* 4 */}
         <View className='flex flex-row items-center w-full mb-2'>
-          <Text className='w-[60%] text-xl'>Abdominal Shape: </Text>
+          <Text className='w-[60%] text-xl text-black'>Abdominal Shape: </Text>
           <Text className={`w-[25%] text-xl font-bold ${details.shape? 'text-green-700' : 'text-red-700'}`}>{details.shape ? 'Positive' : 'Negative'}</Text>
           <Pressable className='pl-2' onPress={() => alert('Clicked')}>
             <MaterialIcons name={'info-outline'} size={20} color={'black'} />

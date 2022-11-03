@@ -38,7 +38,7 @@ const GalleryTab = ({navigation}) => {
   return (
     <View className={'p-4 justify-center flex-1 h-screen bg-gray-200'}>
       <Text className={'text-2xl mb-3 font-bold text-black'}>Select from Device</Text>
-      <Text className={'text-lg mb-6 font-bold'}>
+      <Text className={'text-lg mb-6 font-bold text-black'}>
         Click the button and select an image
       </Text>
       <View className={'flex flex-col items-center justify-center py-2 w-full z-10 mb-5'}>
@@ -63,7 +63,7 @@ const GalleryTab = ({navigation}) => {
           </View>
           :
           <View className={'flex items-center justify-center w-full h-40 '}>
-            <Text>Your Image goes here</Text>
+            <Text className='text-black'>The image goes here</Text>
           </View>
         }
       </View>

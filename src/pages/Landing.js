@@ -11,7 +11,7 @@ const Landing = ({ navigation }) => {
           <Text className={'font-bold text-5xl text-red-700'}>Hook</Text>
         </View>
 
-        <Text className={'font-light text-lg mt-1'}>Capture each threat, Protect your Tilapias</Text>
+        <Text className={'font-light text-lg mt-1 text-black'}>Capture each threat, Protect your Tilapias</Text>
       </View>
 
       {/* ACTIONS */}
