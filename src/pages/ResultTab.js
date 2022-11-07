@@ -16,12 +16,13 @@ const ResultTab = ({navigation, route}) => {
 
   useEffect(() => {
     setTimeout(()=>{
-      console.log('Timer Done')
+      // console.log('Timer Done')
       setIsLoading(false);
     }, 4000)
   }, [])
 
   const createPDF = async () => {
+    var fileName = 'FishHook Results';
     var code = `<div style="display: flex;align-items: flex-start; font-family: Verdana, Geneva, Tahoma, sans-serif; flex-direction: column;padding: 20px;">
       <div style="font-size: 50px;margin: 10px 0px;;">FishHook</div>
       <div style="font-size: 25px;margin: 20px 0px;">Results</div>
@@ -71,13 +72,13 @@ const ResultTab = ({navigation, route}) => {
     </div>`;
     let options = {
       html: code,
-      fileName: 'FishHook Results',
+      fileName: fileName,
       directory: 'Documents',
     };
     // console.log('options', options);
     let file = await RNHTMLtoPDF.convert(options)
-    console.log(file);
-    alert(file.filePath);
+    // console.log(file);
+    alert('Results of the evaluation is now exported as a document and saved in the Documents folder.\nFilename: ' + fileName);
   }
 
   if(isLoading){
