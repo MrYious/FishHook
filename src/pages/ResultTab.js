@@ -24,51 +24,54 @@ const ResultTab = ({navigation, route}) => {
   const createPDF = async () => {
     var fileName = 'FishHook Results';
     var code = `<div style="display: flex;align-items: flex-start; font-family: Verdana, Geneva, Tahoma, sans-serif; flex-direction: column;padding: 20px;">
-      <div style="font-size: 50px;margin: 10px 0px;;">FishHook</div>
-      <div style="font-size: 25px;margin: 20px 0px;">Results</div>
-      <div style="font-size: 15px;">The Image: </div>
-      <img style="width: 50%;border: 2px solid black;margin: 20px 0px 40px 0px;padding: 5px;" src="data:image/png;base64,${route.params.filepath}" alt="">
-      <div style="font-size: 15px;font-weight: bold;display: flex; margin-bottom: 15px;">
-        <div style="font-weight: bold; width: 200px;">The Evaluation:</div>
-        <span style="color: green;">
-          12% ( TiLV NEGATIVE )
-        </span>
-      </div>
-      <div style="font-size: 15px;font-weight: bold;display: flex;flex-direction: column;">
-        <div style="font-weight: bold; margin-bottom: 10px;">Details:</div>
-        <div style="margin-bottom: 10px;display: flex;margin-left: 20px;">
-            <div style="font-weight: bold; width: 200px;">Skin Texture: </div>
-            <div style="color: green;">
-              Negative
+      <div style="font-size: 50px;margin: 10px 0px;">FishHook</div>
+        <div style="font-size: 15px;margin: 10px 0px;">
+          FishHook helps in detecting the existence of TiLV in the nile tilapia based to visible physical signs.
+        </div>
+        <div style="font-size: 25px;margin: 20px 0px; font-weight: bold;">Results</div>
+        <div style="font-size: 15px;font-weight: bold;display: flex;flex-direction: column;">
+            <div style="margin: 10px 0px;display: flex;">
+                <div style="font-weight: bold; width: 70px;">Date: </div>
+                <div >
+                    November 8, 2022
+                </div>
             </div>
         </div>
-        <div style="margin-bottom: 10px;display: flex;margin-left: 20px;">
-            <div style="font-weight: bold; width: 200px;">Skin Color: </div>
-            <div style="color: red;">
-              Positive
+        <div style="font-size: 15px;">The Image: </div>
+        <img style="width: 50%;border: 2px solid black;margin: 20px 0px 40px 0px;padding: 5px;" src="data:image/png;base64,${route.params.filepath}" alt="">
+        <div style="font-size: 15px;font-weight: bold;display: flex; margin-bottom: 15px;">
+            <div style="font-weight: bold; width: 200px;">The Evaluation:</div>
+            <span style="color: green;">
+                12% ( TiLV NEGATIVE )
+            </span>
+        </div>
+        <div style="font-size: 15px;font-weight: bold;display: flex;flex-direction: column;">
+            <div style="font-weight: bold; margin-bottom: 10px;">Details:</div>
+            <div style="margin-bottom: 10px;display: flex;margin-left: 20px;">
+                <div style="font-weight: bold; width: 200px;">Skin Texture: </div>
+                <div style="color: green;">
+                    Negative
+                </div>
+            </div>
+            <div style="margin-bottom: 10px;display: flex;margin-left: 20px;">
+                <div style="font-weight: bold; width: 200px;">Skin Color: </div>
+                <div style="color: red;">
+                    Positive
+                </div>
+            </div>
+            <div style="margin-bottom: 10px;display: flex;margin-left: 20px;">
+                <div style="font-weight: bold; width: 200px;">Scale Pattern: </div>
+                <div style="color: green;">
+                    Negative
+                </div>
+            </div>
+            <div style="margin-bottom: 10px;display: flex;margin-left: 20px;">
+                <div style="font-weight: bold; width: 200px;">Abdominal Shape: </div>
+                <div style="color: green;">
+                    Negative
+                </div>
             </div>
         </div>
-        <div style="margin-bottom: 10px;display: flex;margin-left: 20px;">
-            <div style="font-weight: bold; width: 200px;">Scale Pattern: </div>
-            <div style="color: green;">
-              Negative
-            </div>
-        </div>
-        <div style="margin-bottom: 10px;display: flex;margin-left: 20px;">
-            <div style="font-weight: bold; width: 200px;">Abdominal Shape: </div>
-            <div style="color: green;">
-              Negative
-            </div>
-        </div>
-      </div>
-      <div style="font-size: 15px;font-weight: bold;display: flex;flex-direction: column;">
-        <div style="margin: 10px 0px;display: flex;">
-            <div style="font-weight: bold; width: 70px;">Date: </div>
-            <div >
-              November 8, 2022
-            </div>
-        </div>
-      </div>
     </div>`;
     let options = {
       html: code,
